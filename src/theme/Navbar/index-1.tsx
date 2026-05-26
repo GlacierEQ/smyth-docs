@@ -27,7 +27,7 @@ const MAIN_NAV = [
   { label: 'Why SmythOS', href: 'https://smythos.com/why-smythos' },
   { label: 'Pricing', href: 'https://smythos.com/pricing' },
   { label: 'Docs', href: '/docs' },
-  { label: 'Community', href: 'https://smythos.com/updates' },
+  { label: 'Community', href: 'https://smythos.com/blog' },
   { label: 'Company', href: 'https://smythos.com/about-us' },
 ];
 
@@ -198,7 +198,7 @@ export default function Navbar() {
       >
           <nav id="userMenu" role="navigation" aria-label="User Navigation">
             <ul role="menu">
-              <li className="menu-label" role="none">Go to...</li>
+              <li className="menu-label" role="none">Go to....</li>
               <li role="none">
                 <a
                   href="https://app.smythos.com/"
@@ -207,18 +207,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  SmythOS app
-                </a>
-              </li>
-              <li className="menu-label" role="none">Community</li>
-              <li role="none">
-                <a
-                  href="https://discord.gg/smythos"
-                  role="menuitem"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Discord
+                  SmythOS App
                 </a>
               </li>
             </ul>
@@ -237,7 +226,7 @@ export default function Navbar() {
           <nav id="mobileMenu" role="navigation" aria-label="Mobile Navigation">
             <ul role="menu">
               <li className="menu-label always-open" role="none">
-                <div className="menu-label-content">Go to...</div>
+                <div className="menu-label-content">Go to....</div>
                 <ul className="submenu" role="menu">
                   <li role="none">
                     <a
@@ -281,16 +270,6 @@ export default function Navbar() {
                   </li>
                   <li role="none">
                     <a href="/ai-trends" role="menuitem" onClick={go('/ai-trends')}>Trending</a>
-                  </li>
-                  <li role="none">
-                    <a
-                      href="https://discord.gg/smythos"
-                      role="menuitem"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Discord Community
-                    </a>
                   </li>
                 </ul>
               </li>

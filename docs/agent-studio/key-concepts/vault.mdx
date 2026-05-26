@@ -82,6 +82,111 @@ To add a provider, open **Vault → Add Provider** and paste your credentials.
 
 <Spacer size="md" />
 
+## Custom Models
+
+You can now add **custom models** to the SmythOS platform directly through the Vault.  
+This feature lets you connect your own model servers or third-party hosted APIs, supporting both **Ollama SDK** and **OpenAI-compatible SDK** endpoints.
+
+### How it works
+
+1. Go to **Vault → Custom Models**  
+2. Click **Add Custom Model**  
+3. Provide the required details:
+   - **Name**: The display name shown in the model list  
+   - **Model ID**: Copy from your supported model (e.g., `grok-1`, `ollama-mistral-7b`, etc.)  
+   - **Base URL**: The API base endpoint (for SaaS: must be public, not localhost or private IP)  
+   - **Provider**: Select **Ollama** or **OpenAI**  
+   - **API Key**: Add the provider key if required
+   - **Context Window**: Maximum tokens for input + output  
+   - **Max Output Tokens**: Maximum tokens for model response  
+   - **Fallback Model**: Used when the custom model is unreachable  
+
+### Feature Toggles
+
+- **Text Completion** *(enabled by default)* — Makes model available in all LLM components
+- **Function Calling / Tool Use** *(disabled by default)* — Enables model for Agents with skill calling
+
+<WarningCallout title="Important Security Note (SaaS Environment)">
+Local or private IP addresses (like `localhost`, `127.0.0.1`, `10.x.x.x`, or `172.x.x.x`) are **not allowed** for base URLs in the SaaS environment for security reasons.  
+Always use a public or hosted endpoint instead (e.g., Grok, Together AI, or a remote Colab server).
+
+**Note:** If you're running SmythOS on your own infrastructure, local endpoints are supported.
+</WarningCallout>
+
+Once saved, reload your **Builder** page to see the newly added custom model in your model list.
+
+### Provider Specifications
+
+#### Ollama
+- **Base URL**: `http://your-hosted-model` your hosted Ollama endpoint
+- **Supported Models**: Mistral, Llama 2, Neural Chat, Wizard Coder, and others available in Ollama's model library
+- **Authentication**: Usually not required for local instances; include API key if your hosted instance requires it
+
+#### OpenAI-Compatible
+- **Base URL**: `https://api.openai.com/v1` (OpenAI) or provider-specific endpoint (Grok, Together AI, etc.)
+- **Supported Providers**: OpenAI, Azure OpenAI, Together AI, Replicate, Fireworks, xAI (Grok)
+- **Authentication**: API key if required for OpenAI-compatible providers
+
+### Example: Adding an Ollama Model
+
+~~~json
+{
+  "name": "Mistral 7B Local",
+  "model_id": "mistral-7b",
+  "base_url": "http://your-hosted-model",
+  "provider": "Ollama",
+  "api_key": "",
+  "context_window": 8192,
+  "max_output_tokens": 4096,
+  "fallback_model": "gpt-4o-mini"
+}
+~~~
+
+### Example: Adding a Grok Model (OpenAI-Compatible)
+
+~~~json
+{
+  "name": "Model for Grok",
+  "model_id": "grok-1",
+  "base_url": "https://api.grok.ai/v1",
+  "provider": "OpenAI",
+  "api_key": "grk-1234abcd...",
+  "context_window": 32000,
+  "max_output_tokens": 8000,
+  "fallback_model": "gpt-4o-mini"
+}
+~~~
+
+After saving, reload the Builder. Your custom model will appear at the top of the model list. You can now select it for testing or deployment just like built-in models.
+
+<InfoCallout title="Compatibility"> 
+SmythOS supports two SDK protocols for custom models:
+
+1. **Ollama SDK** — For models running on Ollama instances
+2. **OpenAI SDK** — For any model API compatible with the OpenAI schema (`/v1/chat/completions`, `/v1/completions`, etc.)
+
+This includes integrations built with Ollama, Grok, Together AI, Replicate, or even custom endpoints hosted on services like Google Colab (if properly exposed).
+</InfoCallout>
+
+### Using Custom Models
+
+Custom models appear in all LLM selection dropdowns across SmythOS:
+- **Agent Settings** → Default LLM
+- **Skill components** with LLM options
+- **Any component** that accepts LLM selection
+
+### Managing Custom Models
+
+- **Edit**: Go to **Vault → Custom Models**, click the Edit icon
+- **Delete**: Click the Delete icon
+
+### Managing Keys
+
+Custom model API keys are stored securely in Vault.
+You can reveal, edit, or remove them at any time from the model entry.
+
+<Spacer size="md" />
+
 ## Enterprise platforms
 
 If your team uses managed AI infrastructure, Vault supports enterprise providers too.
@@ -104,9 +209,110 @@ If your team uses managed AI infrastructure, Vault supports enterprise providers
 | Google Vertex AI  | Service Account Key, Project ID, Region | Context window, Max tokens, Temperature, Top-p, Response formatting |
 | Amazon Bedrock    | AWS Access Key ID, Secret, Region   | Context window, Max tokens, Temperature, Top-p, Response formatting |
 
-<Arcade src="https://demo.arcade.software/IW2DEAFY3PcEM8w2IYpF?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add Your Own Model Keys | SmythOS" />
+<Spacer size="md" />
 
 <Spacer size="md" />
+
+## Vector Databases
+
+The **Vector Databases** section in Vault lets you manage connections to vector databases used by your data pool. SmythOS comes with a default managed connection, but you can add your own for greater flexibility and control.
+
+### Default connection
+
+By default, SmythOS provides a managed **SmythOS Pinecone** connection that handles vector storage internally. You don't need to set it up—it works out of the box.
+
+<InfoCallout title="Managed by SmythOS">
+The default Pinecone connection is maintained and scaled automatically. It's ideal for getting started quickly without infrastructure setup.
+</InfoCallout>
+
+<Spacer size="md" />
+
+### Add a custom vector database
+
+You can add additional vector database connections from **Pinecone** or **Milvus** to match your production infrastructure or specific requirements.
+
+#### How to add
+
+1. Go to **Vault → Vector Databases → Add Vector Database**  
+2. Select your provider: **Pinecone** or **Milvus**  
+3. Enter your provider credentials (see tables below)  
+4. Save
+
+Your new connection will appear in the vector database list and be available across your agents and data pools.
+
+<Spacer size="md" />
+
+### Pinecone Connection
+
+Use this option to connect your own Pinecone index.
+
+| Field              | Description                                  |
+|--------------------|----------------------------------------------|
+| **Connection Name**| A label for this connection (e.g., "Production Pinecone") |
+| **API Key**        | Your Pinecone API key                        |
+| **Index Name**     | The name of your Pinecone index              |
+
+**Example:**
+~~~json
+{
+  "connection_name": "Production Pinecone",
+  "api_key": "pcn-abc123...",
+  "index_name": "my-prod-index"
+}
+~~~
+
+<Spacer size="md" />
+
+### Milvus Connection
+
+Use this option to connect a self-hosted or managed Milvus instance.
+
+| Field              | Description                                  |
+|--------------------|----------------------------------------------|
+| **Connection Name**| A label for this connection (e.g., "Self-Hosted Milvus") |
+| **Address**        | The endpoint/address of your Milvus server|
+| **Token**          | Your Milvus authentication token             |
+
+**Example:**
+~~~json
+{
+  "connection_name": "Self-Hosted Milvus",
+  "address": "milvus-prod.example.com:19530",
+  "token": "milvus-token-abc123..."
+}
+~~~
+
+<Spacer size="md" />
+
+### Manage connections
+
+#### Edit
+
+1. Go to **Vault → Vector Databases**  
+2. Click the **Edit** icon next to the connection  
+3. Update your credentials or connection name  
+4. Save  
+
+#### Delete
+
+1. Go to **Vault → Vector Databases**  
+2. Click the **Delete** icon next to the connection  
+3. A confirmation dialog will appear — **type the connection name** to confirm deletion  
+4. Click **Delete**  
+
+<WarningCallout title="Deletion is permanent">
+Deleting a vector database connection will disconnect it from any agents or data pools currently using it. Ensure no active workflows depend on this connection before deleting.
+</WarningCallout>
+
+<Spacer size="md" />
+
+### Using vector databases
+
+Once added, your custom vector database connections are available wherever you configure data pools and embeddings across SmythOS. Simply select the connection you want to use in your RAG components.
+
+<InfoCallout title="When to use custom connections">
+Use the default SmythOS Pinecone for quick testing and prototyping. Switch to your own Pinecone or Milvus instance for production deployments where you need full control over infrastructure, scaling, and billing.
+</InfoCallout>
 
 ## Use keys inside agents
 

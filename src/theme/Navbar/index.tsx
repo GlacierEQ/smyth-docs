@@ -39,7 +39,7 @@ const HeaderComponent: React.FC = () => {
                 <a href="/docs/">Docs</a>
               </li>
               <li>
-                <a href="/updates/">Community</a>
+                <a href="/blog/">Community</a>
               </li>
               <li>
                 <a href="/about-us/">Company</a>
@@ -296,7 +296,7 @@ const HeaderComponent: React.FC = () => {
     <nav id="mobileMenu" role="navigation" aria-label="Mobile Navigation">
       <ul role="menu">
         <li className="menu-label always-open" role="none">
-          <div className="menu-label-content">Go to...</div>
+          <div className="menu-label-content">Go to....</div>
           <ul className="submenu" role="menu">
             <li role="none">
               <a
@@ -744,6 +744,49 @@ const HeaderComponent: React.FC = () => {
                 </svg>{" "}
               </a>
             </li>
+            <li role="none">
+                  <a href="https://smythos.com/product/security/" role="menuitem">
+                    <svg
+                      width={20}
+                      height={20}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.73 1.84 4.562 3.4c-.961.36-1.746 1.496-1.746 2.523v6.207c0 .986.651 2.28 1.445 2.874l3.592 2.681c1.178.886 3.116.886 4.294 0l3.592-2.681c.794-.594 1.445-1.888 1.445-2.874V5.924c0-1.027-.785-2.164-1.746-2.523L11.27 1.84c-.71-.259-1.846-.259-2.54 0z"
+                        style={{ strokeWidth: "1.25307" }}
+                      />
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9.992 9.098h-.109a1.467 1.467 0 0 1-1.412-1.47c0-.81.66-1.47 1.47-1.47.811 0 1.47.66 1.47 1.47a1.474 1.474 0 0 1-1.42 1.47zM8.33 11.442c-.803.534-.803 1.411 0 1.946.91.61 2.405.61 3.316 0 .802-.535.802-1.412 0-1.946-.902-.61-2.398-.61-3.317 0z"
+                        style={{ strokeWidth: "1.25307" }}
+                      />
+                    </svg>{" "}
+                    <span className="link-text">Security</span>
+                    <svg
+                      className="icon-right"
+                      width={20}
+                      height={20}
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
+                        stroke="currentColor"
+                        strokeWidth="1.25"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>{" "}
+                  </a>
+                </li>
           </ul>
         </li>
         <li className="menu-label has-submenu-m" role="none">
@@ -1095,49 +1138,6 @@ const HeaderComponent: React.FC = () => {
           </div>
           <ul className="submenu" role="menu">
             <li role="none">
-              <a href="/updates/" role="menuitem">
-                <svg
-                  width={20}
-                  height={20}
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M1.6923 5.156v10.3825a1.8464 1.8464 0 0 0 1.8461 1.846h12.9232a1.8465 1.8465 0 0 0 1.846-1.846V7.6923c0-.7648-.6198-1.3847-1.3845-1.3847h-2.3078"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{ strokeWidth: "1.38462" }}
-                  />
-                  <path
-                    d="M16.4616 17.3846a1.8461 1.8461 0 0 1-1.8463-1.8461V4c0-.7647-.6199-1.3846-1.3846-1.3846H3.077c-.7647 0-1.3846.62-1.3846 1.3846v6.6947m9.2308-4.387H5.3847M10.923 10H7.2308"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{ strokeWidth: "1.38462" }}
-                  />
-                </svg>{" "}
-                <span className="link-text">Updates</span>
-                <svg
-                  className="icon-right"
-                  width={20}
-                  height={20}
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
-                    stroke="currentColor"
-                    strokeWidth="1.25"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>{" "}
-              </a>
-            </li>
-            <li role="none">
               <a href="/blog/" role="menuitem">
                 <svg
                   width={20}
@@ -1217,12 +1217,7 @@ const HeaderComponent: React.FC = () => {
               </a>
             </li>
             <li role="none">
-              <a
-                href="https://discord.gg/smythos"
-                role="menuitem"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/updates/" role="menuitem">
                 <svg
                   width={20}
                   height={20}
@@ -1231,29 +1226,21 @@ const HeaderComponent: React.FC = () => {
                   viewBox="0 0 20 20"
                 >
                   <path
-                    d="M7.6488 14.551c-.1985.3056-.6944 1.0654-.936 1.3358-.1195.133-.3414.2775-.4967.2587-1.4139-.1752-2.7397-.5902-3.8355-1.5548-.4508-.398-.7339-.8489-.6835-1.5108.1752-2.2925.6924-4.4931 1.5476-6.6283.3864-.9628 1.0744-1.6285 2.0238-1.9553.547-.2282 1.156-.4096 1.748-.5103 1.0473-.1786 1.0815-.238 1.3248.6719a12.7004 12.7004 0 0 1 3.3127 0c.2425-.9098.282-.8507 1.3303-.6719.592.1007 1.2001.282 1.747.5102.9503.327 1.6384.9926 2.0246 1.9554.8553 2.1352 1.3726 4.3358 1.5469 6.6283.0512.6619-.2327 1.1128-.6836 1.5108-1.095.9646-2.4217 1.3796-3.8344 1.5548-.1565.0188-.3784-.1257-.497-.2587-.2416-.2704-.7383-1.0302-.9359-1.3357"
+                    d="M1.6923 5.156v10.3825a1.8464 1.8464 0 0 0 1.8461 1.846h12.9232a1.8465 1.8465 0 0 0 1.846-1.846V7.6923c0-.7648-.6198-1.3847-1.3845-1.3847h-2.3078"
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    style={{ strokeWidth: "1.38478" }}
+                    style={{ strokeWidth: "1.38462" }}
                   />
                   <path
-                    d="M5.5184 13.5758c2.9876 1.7802 5.975 1.7802 8.9626 0"
+                    d="M16.4616 17.3846a1.8461 1.8461 0 0 1-1.8463-1.8461V4c0-.7647-.6199-1.3846-1.3846-1.3846H3.077c-.7647 0-1.3846.62-1.3846 1.3846v6.6947m9.2308-4.387H5.3847M10.923 10H7.2308"
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    style={{ strokeWidth: "1.38478" }}
-                  />
-                  <path
-                    clipRule="evenodd"
-                    d="M8.53 10.0137c0 .7478-.5165 1.3532-1.1542 1.3532-.6368 0-1.1542-.6054-1.1542-1.3532 0-.7478.5174-1.3534 1.1542-1.3534.6377 0 1.1543.6056 1.1543 1.3534zm5.2471 0c0 .7478-.5165 1.3532-1.1542 1.3532-.6377 0-1.1542-.6053-1.1542-1.353 0-.7479.5165-1.3534 1.1542-1.3534.6377 0 1.1542.6055 1.1542 1.3533z"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{ strokeWidth: "1.38478" }}
+                    style={{ strokeWidth: "1.38462" }}
                   />
                 </svg>{" "}
-                <span className="link-text">Discord Community</span>
+                <span className="link-text">Updates</span>
                 <svg
                   className="icon-right"
                   width={20}
@@ -1273,49 +1260,39 @@ const HeaderComponent: React.FC = () => {
               </a>
             </li>
             <li role="none">
-              <a href="forged.smythos.com" role="menuitem">
-                <svg
-                  width={20}
-                  height={20}
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="m13.9716 8.3795-5.4458 5.4458c-1.06 1.06-2.7782 1.06-3.8382 0l-2.046-2.0459c-1.0599-1.06-1.0599-2.7782 0-3.8381l5.446-5.446c1.0599-1.0599 2.7781-1.0599 3.838 0l2.046 2.046c1.06 1.06 1.06 2.7782 0 3.8382z"
-                    stroke="currentColor"
-                    strokeWidth="1.385"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M1.6925 18.2952h4.0362M12.9403 9.6534l4.8551 4.8551c.6885.6884.6885 1.805 0 2.4934l-.6481.6482c-.6884.6883-1.805.6883-2.4933 0l-4.8552-4.8552"
-                    stroke="currentColor"
-                    strokeWidth="1.385"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>{" "}
-                <span className="link-text">Smyth Forged</span>
-                <svg
-                  className="icon-right"
-                  width={20}
-                  height={20}
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
-                    stroke="currentColor"
-                    strokeWidth="1.25"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>{" "}
-              </a>
-            </li>
+            <a href="https://smythos.com/events/" role="menuitem">
+              <svg
+                width={20}
+                height={20}
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M14.617 1.233c-.25.062-.397.171-.505.371-.051.096-.062.215-.073.821l-.012.708H5.972l-.011-.691c-.013-.774-.021-.804-.257-1.018-.148-.134-.291-.173-.538-.15a.615.615 0 0 0-.512.364c-.085.171-.087.19-.087.835 0 .363-.012.66-.025.66-.277.002-1.11.08-1.257.118-.763.199-1.288.745-1.473 1.533-.059.255-.062.52-.062 6.166 0 5.53.004 5.916.059 6.151.187.797.718 1.349 1.491 1.549.399.103 1.131.116 6.7.116s6.301-.013 6.7-.116c.775-.201 1.303-.749 1.491-1.549.055-.235.059-.621.059-6.151 0-5.646-.003-5.911-.062-6.166-.185-.788-.709-1.333-1.474-1.534-.162-.042-.908-.114-1.206-.116l-.075-.001v-.654c0-.42-.014-.703-.04-.791-.09-.297-.483-.528-.776-.455m2.282 10.475c-.001 2.37-.014 4.493-.031 4.718-.05.691-.18.844-.77.906-.426.045-11.77.045-12.196 0-.584-.061-.718-.215-.77-.888-.017-.217-.031-2.34-.031-4.719L3.1 7.4h13.8l-.001 4.308m-5.432.017a.59.59 0 0 0-.191.172c-.076.113-.076.117-.076 1.42s0 1.307.076 1.42c.152.228.162.23 1.569.23 1.397 0 1.431-.005 1.559-.214.058-.096.062-.19.062-1.436s-.004-1.34-.062-1.436c-.128-.21-.162-.214-1.559-.214-1.135 0-1.273.006-1.378.058"
+                  fill="currentColor"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <span className="link-text">Events</span>
+              <svg
+                className="icon-right"
+                width={20}
+                height={20}
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
+                  stroke="currentColor"
+                  strokeWidth="1.25"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
           </ul>
         </li>
         <li className="menu-label has-submenu-m" role="none">
@@ -1473,6 +1450,63 @@ const HeaderComponent: React.FC = () => {
               </a>
             </li>
             <li role="none">
+                  <a href="https://smythos.com/careers/" role="menuitem">
+                    <svg
+                      width={20}
+                      height={20}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M10 10.993a.655.655 0 0 1 .655.656v2.296a.655.655 0 0 1-1.31 0v-2.296a.655.655 0 0 1 .655-.656"
+                        clipRule="evenodd"
+                        style={{ strokeWidth: "1.31062" }}
+                      />
+                      <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M1.486 9.164a.655.655 0 0 1 .914-.161l.01.006c1.999 1.228 4.658 1.984 7.586 1.984 2.925 0 5.59-.754 7.59-1.98l.005-.004a.656.656 0 1 1 .77 1.062l-.027.018-.04.026c-2.231 1.375-5.146 2.19-8.298 2.19s-6.06-.815-8.29-2.19l-.032-.02-.027-.019a.655.655 0 0 1-.16-.912"
+                        clipRule="evenodd"
+                        style={{ strokeWidth: "1.31062" }}
+                      />
+                      <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M4.148 6.068c-1.04.927-1.541 2.473-1.541 5.109s.5 4.183 1.541 5.111c1.064.948 2.857 1.403 5.852 1.403s4.788-.455 5.852-1.403c1.042-.928 1.541-2.474 1.541-5.111 0-2.634-.5-4.18-1.541-5.11-1.064-.948-2.857-1.403-5.852-1.403s-4.788.457-5.852 1.404m-.871-.979C4.727 3.797 6.959 3.355 10 3.355c3.043 0 5.273.442 6.723 1.734 1.474 1.312 1.98 3.349 1.98 6.088 0 2.74-.506 4.777-1.98 6.09C15.273 18.557 13.043 19 10 19s-5.273-.442-6.723-1.734c-1.474-1.312-1.98-3.35-1.98-6.09 0-2.738.506-4.775 1.98-6.087"
+                        clipRule="evenodd"
+                        style={{ strokeWidth: "1.31062" }}
+                      />
+                      <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M6.494 3.655C6.494 2.255 7.531 1 8.95 1h2.102c1.418 0 2.455 1.256 2.455 2.655v.55a.655.655 0 0 1-1.31 0v-.55c0-.808-.577-1.344-1.145-1.344H8.95c-.568 0-1.144.536-1.144 1.344v.55a.655.655 0 0 1-1.31 0z"
+                        clipRule="evenodd"
+                        style={{ strokeWidth: "1.31062" }}
+                      />
+                    </svg>{" "}
+                    <span className="link-text">Careers</span>
+                    <svg
+                      className="icon-right"
+                      width={20}
+                      height={20}
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
+                        stroke="currentColor"
+                        strokeWidth="1.25"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>{" "}
+                  </a>
+                </li>
+            <li role="none">
               <a href="/updates/changelog/" role="menuitem">
                 <svg
                   width={20}
@@ -1566,63 +1600,6 @@ const HeaderComponent: React.FC = () => {
               />
             </svg>{" "}
             <span className="link-text">SmythOS app</span>
-            <svg
-              className="icon-right"
-              width={20}
-              height={20}
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.83325 14.1667L14.1666 5.83333M14.1666 5.83333H7.49992M14.1666 5.83333V12.5"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>{" "}
-          </a>
-        </li>
-        <li className="menu-label" role="none">
-          Community
-        </li>
-        <li role="none">
-          <a
-            href="https://discord.gg/smythos"
-            role="menuitem"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              width={20}
-              height={20}
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.674.77h8.651c3.024 0 4.906 2.134 4.906 5.154v8.151c0 3.021-1.882 5.156-4.907 5.156h-8.65c-3.024 0-4.905-2.135-4.905-5.156v-8.15C.77 2.903 2.66.768 5.674.768z"
-                stroke="currentColor"
-                strokeWidth="1.538"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M8.337 9.994v.037m.153-.03a.154.154 0 1 1-.308 0 .154.154 0 0 1 .308 0zM11.665 9.994v.037m.153-.03a.154.154 0 1 1-.308 0 .154.154 0 0 1 .308 0z"
-                stroke="currentColor"
-                strokeWidth="1.538"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M8.306 5.705a9.979 9.979 0 0 0-2.045.582 1.059 1.059 0 0 0-.51.44 10.035 10.035 0 0 0-1.345 6.085c.073.718.9 1.053 1.52 1.305l.193.079c.974.414 1.44-.621 1.752-1.332 1.402.31 2.856.31 4.258 0 .311.711.778 1.746 1.752 1.332.06-.026.125-.052.192-.079.621-.252 1.448-.587 1.52-1.305.21-2.12-.261-4.251-1.344-6.085a1.059 1.059 0 0 0-.51-.44 9.977 9.977 0 0 0-2.045-.582l-.522.598H8.828Z"
-                stroke="currentColor"
-                strokeWidth="1.538"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>{" "}
-            <span className="link-text">Discord</span>
             <svg
               className="icon-right"
               width={20}

@@ -41,7 +41,7 @@ Your self-hosted WordPress.org site gives you full control. Integrating it with 
 
 </details>
 </InfoCallout>
-<Divider />
+<Spacer size="md" /> 
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ Before you begin, please ensure you have the following:
 - An **Administrator** user account on your WordPress site.
 - An **Application Password** generated for that user.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Getting Started With WordPress.org
 
@@ -84,7 +84,7 @@ Your encoded credentials are a sensitive secret. Use the SmythOS `Vault` to stor
 4.  Your connection is now configured for that component.
 
 <InfoCallout title="Heads-up">You must add the Base64 encoded secret from the Vault to each WordPress.org component that performs a write action (Create, Update, Delete).</InfoCallout>
-<Divider />
+<Spacer size="md" /> 
 
 ## Which WordPress.org Component Should I Use?
 
@@ -125,7 +125,7 @@ This component allows you to update the content of an existing post on a WordPre
 An agent monitors a product database. When a product's description changes, the agent uses this component to update the corresponding product page on the WordPress site.
 </TipCallout>
 
-<Arcade src="https://demo.arcade.software/Q0ceziGGQqDljUkhmyGx?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WP.org Update Post" />
+<Youtube videoId="X48B8bWD7YE" title="WP.org Update Post" />
 
 <Divider/>
 
@@ -151,7 +151,7 @@ This component retrieves a collection of posts from a WordPress.org site.
 A "content syndication" agent uses this component to get the latest posts from a source blog to be re-published elsewhere.
 </TipCallout>
 
-<Arcade src="https://demo.arcade.software/mV11AlNWcMy99D3Tl1gr?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WP.org List Posts" />
+<Youtube videoId="rDtTAperPBc" title="WP.org List Posts" />
 
 <Divider/>
 
@@ -178,7 +178,7 @@ Retrieve a specific post from your WordPress.org site by accessing its detailed 
 An agent, tasked with summarizing an article, uses this component to fetch the full `content` before passing it to an LLM.
 </TipCallout>
 
-<Arcade src="https://demo.arcade.software/2MAHfE57ztLT13OcD94n?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WP.org Get Post" />
+<Youtube videoId="s7bqOBZkC1A" title="WP.org Get Post" />
 
 <Divider/>
 
@@ -207,7 +207,7 @@ This component allows for the creation of a draft post on your WordPress.org sit
 An agent generates a first draft of a technical article using an AI model, then calls this component to save it to WordPress with relevant SEO metadata for an editor to review.
 </TipCallout>
 
-<Arcade src="https://demo.arcade.software/7iSVJIIzcNmP39Ijs9UP?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WP.org Create Draft Post" />
+<Youtube videoId="XJo5Jx2PO8s" title="WP.org Create Draft Post" />
 
 <Divider/>
 
@@ -236,7 +236,7 @@ This component creates a draft post with a featured image attachment on your Wor
 An agent generates a blog post and a corresponding image. It first uploads the image to the Media Library (using a different component or process), gets the `image_id`, and then calls this component to create the draft and set the featured image in one step.
 </TipCallout>
 
-<Arcade src="https://demo.arcade.software/cyBLONuB5xxkBy4JZaSG?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WPorg Create Post With Image" />
+<Youtube videoId="dLkeMFHiuFg" title="WPorg Create Post With Image" />
 
 <Divider/>
 
@@ -265,9 +265,9 @@ An agent identifies promotional posts for events that have already passed and au
 This action permanently deletes the post. Use with caution.
 </WarningCallout>
 
-<Arcade src="https://demo.arcade.software/HWrgHHPEeyf9pwEchsrb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WP.org Delete Post" />
+<Youtube videoId="jSQwQGXP25k" title="WP.org Delete Post" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Best Practices & Advanced Tips
 
@@ -276,7 +276,7 @@ This action permanently deletes the post. Use with caution.
 * **Manage Media First:** To create a post with an image, you must first ensure the image exists in your WordPress Media Library. This may require a separate agent step to upload the image via the REST API to get the `image_id`.
 * **Update Status to Publish:** The `Create Draft Post` component saves the post with a `draft` status. To publish it, you must use the `Update Post` component, providing the `post_id` and setting the `status` to `publish` in the request body.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Troubleshooting Common Issues
 
@@ -292,7 +292,7 @@ This action permanently deletes the post. Use with caution.
   * **Cause:** The `image_id` provided to the `Create Post With Image` component is incorrect or does not exist in the Media Library.
   * **Solution:** Confirm the image ID in your WordPress Media Library. Ensure the image was successfully uploaded before calling the component.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## What's Next?
 

@@ -13,17 +13,7 @@ Use the **Web Scrape** component to extract content from one or more webpages. T
 The web is the world's largest data source. The Web Scrape component allows your agent to tap into this source, enabling it to perform market research, monitor competitors, aggregate news, or gather any other publicly available information to inform its actions and enrich its knowledge base.
 </InfoCallout>
 
-<Spacer size="md" />
-
-## What You’ll Configure
-
-- [Configure Scraper Settings](#step-1-configure-scraper-settings)
-- [Provide Target URLs](#step-2-provide-target-urls)
-- [Handle the Results](#step-3-handle-the-results)
-- [Usage and Abuse Policy](#step-4-usage-and-abuse-policy)
-- [Best Practices](#best-practices)
-- [Troubleshooting Tips](#troubleshooting-tips)
-- [What to Try Next](#what-to-try-next)
+<Youtube videoId="3fTCft8vBuc" title="WebScrape | SmythOS" />
 
 <Spacer size="md" />
 
@@ -31,20 +21,19 @@ The web is the world's largest data source. The Web Scrape component allows your
 
 Fine-tune the scraper's behavior to match the structure of your target websites and the format you need.
 
-| Setting                      | Description                                                                                                                                                                                                                                    |
+| Setting| Description|
 |------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Format** | Choose how the scraped content should be structured. Options include `Markdown` (great for LLMs), `Text` (for clean text extraction), `Raw` HTML, or structured `JSON`. You can also choose to exclude images or links from Markdown. |
-| **Bypass Anti-Bot Protection** | Enable this if the target website uses tools like Cloudflare or other Captcha-based systems to block scrapers.                                                                                                                                   |
-| **JavaScript Rendering** | Enable this for Single Page Applications (SPAs) or any site that loads its content dynamically using JavaScript. The component will render the page in a headless browser before extracting content.                                                 |
-| **Auto Scroll** | Enable this for pages that use infinite scrolling to load more content as the user scrolls down. The component will automatically scroll to the bottom to ensure all content is loaded before extraction.                                                 |
+| **Countries** | Select one or more countries for proxy rotation using ISO 3166-1 alpha-2 country codes (e.g., US, GB, FR, DE). Routes scraping requests through proxies from selected geographic locations to access region-restricted content. |
+| **Bypass Anti-Bot Protection** | Enable this if the target website uses tools like Cloudflare or other Captcha-based systems to block scrapers.|
+| **JavaScript Rendering** | Enable this for Single Page Applications (SPAs) or any site that loads its content dynamically using JavaScript. The component will render the page in a headless browser before extracting content.|
+| **Auto Scroll** | Enable this for pages that use infinite scrolling to load more content as the user scrolls down. The component will automatically scroll to the bottom to ensure all content is loaded before extraction.                                                |                                                |
 
 <TipCallout title="Which Format Should I Choose?">
 - Use **Markdown** when you plan to feed the content into a **GenAI LLM** for summarization or analysis.
 - Use **Text** when you only need the raw text content without any formatting.
 - Use **JSON** for a structured representation of the page, which is useful for targeted data extraction.
 </TipCallout>
-
-<Arcade src="https://demo.arcade.software/CGogKgUeHYFSff4xVZ1Z?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="WebScrape | SmythOS" />
 
 <Spacer size="md" />
 

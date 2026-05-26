@@ -28,7 +28,7 @@ Grab your Airtable <code>Personal Access Token</code> and <code>Base ID</code>, 
 | [List Tables](#list-tables) | Returns all tables in a base | <code>baseID</code>, <code>trigger</code> | <code>tables</code> | Dynamically discover table names |
 | [Get Row Data](#get-row-data) | Retrieve rows by field-based query | <code>baseID</code>, <code>tableId</code>, <code>field_name</code>, <code>query</code> | <code>fields</code>, <code>id</code> | Search for a user by email |
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Before using any Airtable component in SmythOS, make sure to:
 Never expose tokens directly in components. Always store secrets in <strong>Vault</strong> and reference them by name.
 </TipCallout>
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Component Details
 
@@ -68,9 +68,9 @@ Fetches a specific record from a table using its ID.
 | `response` | Full response object |
 | `headers` | HTTP headers from Airtable |
 
-<Arcade src="https://demo.arcade.software/Qo0syvxwkcFlQfsQsS57?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Airtable Get Record" />
+<Youtube videoId="QupjUF2aGpI" title="Airtable Get Record" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="list-records"></a>List Records
 
@@ -92,9 +92,9 @@ Lists records from a table.
 | `response` | Raw Airtable response |
 | `headers` | HTTP headers |
 
-<Arcade src="https://demo.arcade.software/q5PRuLK1UNzdFXuKctUZ?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Airtable List Records" />
+<Youtube videoId="TQjQHDBoOnc" title="Airtable List Records" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="list-records-next-page"></a>List Records (Next Page)
 
@@ -117,9 +117,9 @@ Use this to paginate through a large dataset.
 | `response` | Airtable raw response |
 | `headers` | HTTP headers |
 
-<Arcade src="https://demo.arcade.software/ifGa3upx1hbovESLKg2s?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="List Records (Next Page)" />
+<Youtube videoId="F94AtfqEnvw" title="List Records (Next Page)" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="create-a-record"></a>Create a Record
 
@@ -141,9 +141,9 @@ Creates a single record in a given table.
 | `response` | Full response from Airtable |
 | `headers` | HTTP headers |
 
-<Arcade src="https://demo.arcade.software/D34paVicB2m8BkVJhy21?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Create a Record" />
+<Youtube videoId="JvSh7os5FGI" title="Create a Record" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="create-records"></a>Create Records
 
@@ -165,9 +165,9 @@ Creates multiple records in batch.
 | `response` | API response |
 | `headers` | HTTP metadata |
 
-<Arcade src="https://demo.arcade.software/Uzdb0vAfrpzJJwkjuy9Z?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Create Records" />
+<Youtube videoId="dPmVPh96RGg" title="Create Records" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="update-record"></a>Update Record
 
@@ -191,9 +191,9 @@ Updates fields for a given record.
 | `response` | Full API response |
 | `headers` | HTTP metadata |
 
-<Arcade src="https://demo.arcade.software/B5OWBuPDNrjLTCiXFdVl?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Update Record" />
+<Youtube videoId="68cbk55ZeCA" title="Update Record" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="list-tables"></a>List Tables
 
@@ -214,9 +214,9 @@ Lists all tables from a base.
 | `response` | Airtable response |
 | `headers` | HTTP headers |
 
-<Arcade src="https://demo.arcade.software/m0WQ5uzKw4XL7WpghNAN?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="List Tables" />
+<Youtube videoId="8cNI70jsqlo" title="List Tables" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ### <a name="get-row-data"></a>Get Row Data
 
@@ -240,9 +240,9 @@ Finds rows based on a field-value match.
 | `response` | Full API response |
 | `headers` | HTTP headers |
 
-<Arcade src="https://demo.arcade.software/KhxRAayWiwR6FC6AN06Z?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Get Row Data" />
+<Youtube videoId="N2ftS4CTdeY" title="Get Row Data" />
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Best Practices
 
@@ -254,7 +254,7 @@ Use consistent field naming across Airtable and your other systems to simplify m
 - Use pagination components (`List Records Next Page`) for large datasets.
 - Validate case-sensitive table names and record IDs carefully.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## What's Next?
 

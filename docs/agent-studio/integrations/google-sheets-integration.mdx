@@ -44,7 +44,7 @@ Essentially, this integration transforms your Google Sheets from static document
 
 </details>
 </InfoCallout>
-<Divider />
+<Spacer size="md" /> 
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ Before you begin the integration, please ensure you have the following:
 - A **Google Account** that has access to the Google Sheets you plan to use.
 - Permission to interact with your Google Sheets during the authentication process.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Getting Started With Google Sheets
 
@@ -64,7 +64,7 @@ The connection between SmythOS and your Google Sheets is typically a one-time se
 
 1.  In your SmythOS dashboard, locate and click on the **Integrations** section. This is your center for connecting SmythOS to external services.
 3.  From the list of available integrations, drag and drop any of the components under **Google Sheets**.
-<Divider />
+<Spacer size="md" /> 
 
 ### Step 2: Sign in with Google
 
@@ -72,7 +72,6 @@ This grants SmythOS secure permission to access your Google Sheets. You have two
 
 * **Option A: The Direct `Authenticate` Button**
     You'll often see a clear, blue **`Authenticate`** button directly on a Google Sheets component when you first add it, or if it's not yet connected. This is usually the quickest method.
-    <Arcade src="https://demo.arcade.software/0yZN1r9Y94cQUDNIZMqj?embed&theme=light&embed_mobile=tab&embed_desktop=inline" title="Authenticating via the direct blue button" />
 
 * **Option B: Via Component Settings**
     If the direct button isn't visible, or if you prefer, you can usually find an **`Authenticate`** button within the settings of any Google Sheets component. Look for a tab labeled: "OAuth"
@@ -82,8 +81,7 @@ This grants SmythOS secure permission to access your Google Sheets. You have two
 2.  Google will then display a consent screen. This screen details the permissions SmythOS is requesting (e.g., to view and manage your spreadsheets). Take a moment to review these, then click **Allow** to proceed. We only request permissions necessary for the integration's functionality.
 3.  Once you've granted permission, you'll be returned to SmythOS. The Google Sheets integration or component should now indicate that it's authenticated and ready for use. **Connection Confirmed!**
 
-<InfoCallout title="Switching Google Accounts or Reconnecting?" collapsible collapse="true">If you ever need to connect a different Google Account or just want to refresh an existing connection, you can typically find a `Sign Out` or `Deauthenticate` button within the Google Sheets integration settings in SmythOS, or on the "OAuth" tab of a component. After deauthenticating, simply repeat the authentication steps above with the new account.
-    <Arcade src="https://demo.arcade.software/O4XiABuBEZ4pMw1pnKP5?embed&theme=light&embed_mobile=tab&embed_desktop=inline" title="Deauthenticating Google Sheets" /> _Image: Deauthenticating your Google Sheets account in SmythOS settings._ </InfoCallout>
+<InfoCallout title="Switching Google Accounts or Reconnecting?" collapsible collapse="true">If you ever need to connect a different Google Account or just want to refresh an existing connection, you can typically find a `Sign Out` or `Deauthenticate` button within the Google Sheets integration settings in SmythOS, or on the "OAuth" tab of a component. After deauthenticating, simply repeat the authentication steps above with the new account.</InfoCallout>
 ### Step 3: Test the Connection
 
 Before building workflows, confirm your Google Sheets integration is working.
@@ -112,7 +110,7 @@ sheet: Sheet1`} />
 - Ensure there are no errors in `response` or `headers`
 
 <InfoCallout title="Heads-up"> This confirms your connection works.  <br/> It doesn’t guarantee permission to write, format, or append, only that read access is working. </InfoCallout>
-<Divider />
+<Spacer size="md" /> 
 ## Common Google Sheets Parameters
 
 Many Google Sheets components share the same input and output fields. Below are the **standard parameters** so you don’t have to memorize them per-component. 
@@ -872,7 +870,7 @@ To make the most of your Google Sheets integration, consider these tips:
     * For "Get Values" or "Update Values," be as specific as possible with your `range` to avoid processing unnecessary data.
 * **Test Thoroughly:** Before deploying agents that interact with critical spreadsheets, test them thoroughly in a development or staging environment with sample data.
 
-<Divider />
+<Spacer size="md" /> 
 
 ## Troubleshooting Common Issues
 
@@ -900,7 +898,7 @@ Encountering an issue with your Google Sheets integration? Here are solutions to
     If you're still facing issues, the SmythOS support team is always ready to help. Plus, the `response` output from the Google Sheets components often contains detailed error messages directly from Google that can provide excellent clues. [Link to SmythOS Support Page]
 </InfoCallout>
 
-<Divider />
+<Spacer size="md" /> 
 
 ## What's Next?
 

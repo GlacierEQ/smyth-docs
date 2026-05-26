@@ -49,6 +49,7 @@ This section covers unit pricing. For plan quotas and features, see [Compare Pla
 | Model         | Input Price (per 1M tokens) | Cached Input Price (per 1M tokens) | Output Price (per 1M tokens) | Max Context Size | Search Price (per 1k calls) | Image Support |
 |---------------|-----------------------------|-------------------------------------|------------------------------|------------------|-----------------------------|---------------|
 | GPT-5         | $1.30                        | $0.13                               | $10.00                       | 400k tokens      | $10.00                      | Text only (token-based) |
+| GPT-5 pro     | $10.00                      | N/A                                 | $15.00                       | 400k tokens      | $120.00                     |  Text only (token-based) |
 | GPT-5 mini    | $0.30                        | $0.03                               | $2.00                        | 400k tokens      | $10.00                      | Text only (token-based) |
 | GPT-5 nano    | $0.10                        | $0.01                               | $0.40                         | 400k tokens      | N/A                         | Text only (token-based) |
 | GPT-5 Chat    | $1.30                        | $0.13                               | $10.00                       | 400k tokens      | N/A                         | Text only (token-based) |
@@ -91,26 +92,30 @@ For models that accept image input, pricing is based on text tokens.
 
 ### Claude (Anthropic)
 
-| Model              | Input Price (per 1M tokens) | Output Price (per 1M tokens) | Max Context Size | Notes |
-|--------------------|-----------------------------|------------------------------|------------------|-------|
-| Claude Sonnet 4    | $3.00                        | $15.00                       | 200k tokens      | High-performance version |
-| Claude Opus 4      | $15.00                       | $75.00                       | 200k tokens      | High-performance reasoning |
-| Claude Opus 4.1    | $15.00                       | $75.00                       | 200k tokens      | **Most capable model yet**, excels at complex reasoning & advanced coding |
+| Model             | Input Price (per 1M tokens) | Output Price (per 1M tokens) | Max Context Size | Notes |
+| ----------------- | --------------------------- | ---------------------------- | ---------------- | ----- |
+| Claude Haiku 4.5  | $0.01                       | $1.00                        | 200k tokens      | Fastest and most intelligent Haiku model |
+| Claude Sonnet 4.5 | $0.01                       | $3.00                        | 200k tokens      | Best model for complex agents and coding |
+| Claude Sonnet 4   | $3.00                       | $15.00                       | 200k tokens      | High-performance version |
+| Claude Opus 4     | $15.00                      | $75.00                       | 200k tokens      | High-performance reasoning |
+| Claude Opus 4.1   | $15.00                      | $75.00                       | 200k tokens      | **Most capable model yet**, excels at complex reasoning & advanced coding |
+| Claude Opus 4.5   | $5.00                       | $25.00                       | 200k tokens      | Latest model with improved performance |
 
 <details>
 <summary> View Legacy Claude Models</summary>
 
-> **Note:** These models are **legacy** in SmythOS. They are still available, but not recommended for new projects.
+> **Note:** These models are legacy in SmythOS. They are still available, but not recommended for new projects.
 
-| Model                    | Input Price (per 1M tokens) | Output Price (per 1M tokens) | Max Context Size | Status |
-|--------------------------|-----------------------------|------------------------------|------------------|--------|
-| Claude 3 Opus            | $15.00                       | $75.00                       | 200k tokens      | Legacy |
-| Claude 3.5 Haiku         | $0.80                        | $4.00                        | 200k tokens      | Legacy |
-| Claude 3.5 Sonnet Latest | $3.00                        | $15.00                       | 200k tokens      | Legacy |
-| Claude 3.5 Sonnet Stable | $3.00                        | $15.00                       | 200k tokens      | Legacy |
-| Claude 3.7 Sonnet        | $3.00                        | $15.00                       | 200k tokens      | Legacy |
-| Claude 3.7 Sonnet Thinking | $3.00                      | $15.00                       | 200k tokens      | Legacy |
+| Model                      | Input Price (per 1M tokens) | Output Price (per 1M tokens) | Max Context Size | Status |
+|---------------------------|-----------------------------|------------------------------|------------------|--------|
+| Claude 3 Opus             | $15.00                      | $75.00                       | 200k tokens      | Legacy |
+| Claude 3.5 Haiku          | $0.80                       | $4.00                        | 200k tokens      | Legacy |
+| Claude 3.5 Sonnet         | $3.00                       | $15.00                       | 200k tokens      | Legacy |
+| Claude 3.7 Sonnet Thinking| $3.00                       | $15.00                       | 200k tokens      | Legacy |
+| Claude 3.7 Sonnet         | $3.00                       | $15.00                       | 200k tokens      | Legacy |
+
 </details>
+
 <Spacer size="md" />
 
 ### Perplexity Models
@@ -152,6 +157,9 @@ Task costs only apply in live deployments. Testing in the builder is always free
 | Tool         | Provider     | Rate                          |
 |--------------|--------------|-------------------------------|
 | GPT Image    | OpenAI       | $5 input, $10 image input, $40 output per 1M tokens |
+| Nano Banana    | GoogleAI   | $0.039 per request, $0.30 text/image input per 1M tokens |
+| Imagen 4       | GoogleAI   | $0.040 per request            |
+| Imagen 4 Ultra | GoogleAI   | $0.060 per request            |
 | HD 8 Steps   | Flux Schnell | $0.001 per request            |
 | HD 50 Steps  | Flux Dev     | $0.008 per request            |
 

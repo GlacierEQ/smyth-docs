@@ -13,11 +13,19 @@
   --ifm-color-primary-lighter: #6ea6ff; 
   --ifm-color-primary-lightest: #8cbaff; 
   --ifm-code-font-size: 95%;
-  --smyth-font-ui: "Inter", sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: var(--ifm-font-family-base);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .header {
   position: relative !important;
@@ -92,58 +100,11 @@ a.menu__link[href="/docs/agent-collaboration/overview"].menu__link--active
 } */
 
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
   font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-300.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
+  font-family: Manrope;
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-500.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-600.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-700.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-800.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("https://smythos.com/wp-content/themes/generatepress_child/fonts/inter-v12-latin-900.woff2") format("woff2");
-}
-
-html *,
-body * {
-  font-family: "Inter", sans-serif !important;
+  font-weight: 200 800;
+   src: url(https://smythos.com/wp-content/themes/generatepress_child/fonts/manrope.woff2) format("woff2")
 }
 
 /* 
